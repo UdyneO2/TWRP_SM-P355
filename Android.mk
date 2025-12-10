@@ -18,6 +18,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE), gt58lte)
+ifeq ($(TARGET_DEVICE), gt5note8lte)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif

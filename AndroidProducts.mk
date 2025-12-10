@@ -17,4 +17,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_gt58lte.mk
+     $(LOCAL_DIR)/omni_gt5note8lte.mk

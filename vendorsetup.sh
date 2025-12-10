@@ -16,5 +16,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_gt58lte-userdebug
-add_lunch_combo omni_gt58lte-eng
+add_lunch_combo omni_gt5note8lte-userdebug
+add_lunch_combo omni_gt5note8lte-eng
