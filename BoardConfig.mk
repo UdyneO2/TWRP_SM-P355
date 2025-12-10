@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/gt58ltebmc
+DEVICE_PATH := device/samsung/gt58lte
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -29,7 +29,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := gt58ltebmc
+TARGET_OTA_ASSERT_DEVICE := gt58lte,gt58ltebmc
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -60,8 +60,8 @@ BOARD_MKBOOTIMG_ARGS += --dt $(TARGET_PREBUILT_DT)
 BOARD_KERNEL_IMAGE_NAME := zImage
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
-TARGET_KERNEL_SOURCE := kernel/samsung/gt58ltebmc
-TARGET_KERNEL_CONFIG := gt58ltebmc_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/gt58lte
+TARGET_KERNEL_CONFIG := gt58lte_defconfig
 
 # Ramdisk compression
 LZMA_RAMDISK_TARGETS := recovery

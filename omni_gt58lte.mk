@@ -21,17 +21,17 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit from gt58ltebmc device
-$(call inherit-product, device/samsung/gt58ltebmc/device.mk)
+# Inherit from gt58lte device
+$(call inherit-product, device/samsung/gt58lte/device.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 #$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := gt58ltebmc
-PRODUCT_NAME := omni_gt58ltebmc
+PRODUCT_DEVICE := gt58lte
+PRODUCT_NAME := omni_gt58lte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-T350
+PRODUCT_MODEL := SM-P355
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_RELEASE_NAME := samsung SM-T350
+PRODUCT_RELEASE_NAME := samsung SM-P355

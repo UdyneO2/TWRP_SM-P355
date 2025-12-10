@@ -14,8 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
-TWRP_DEVICE := SM-T357W
-TWRP_VERSION := 3.5.2_9
+TWRP_DEVICE := SM-P355
+TWRP_VERSION := 3.5.2-mnrdnn
 TWRP_BUILD_TYPE := Unofficial
 TWRP_BUILD_DATE := $(shell date --utc +%Y%m%d)
  

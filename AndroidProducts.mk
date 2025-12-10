@@ -17,4 +17,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_gt58ltebmc.mk
+     $(LOCAL_DIR)/omni_gt58lte.mk

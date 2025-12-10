@@ -16,5 +16,5 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/gt58ltebmc
+LOCAL_PATH := device/samsung/gt58lte
 
