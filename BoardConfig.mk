@@ -30,7 +30,7 @@ TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_CORTEX_A53 := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := gt5note8lte,gt58ltebmc
+TARGET_OTA_ASSERT_DEVICE := gt5note8lte,gt58ltebmc,gt58ltebmcxx,SM-T357W,SM-T355Y,gt58ltexx,SM-T355,gt58lte,gt58ltedo,SM-P355M,SM-P355,gt5note8lteub
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
