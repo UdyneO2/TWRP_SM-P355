@@ -26,7 +26,8 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_CORTEX_A53 := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := gt5note8lte,gt58ltebmc
@@ -46,7 +47,7 @@ BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci buildvariant=eng
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage
 TARGET_PREBUILT_DT := $(DEVICE_PATH)/prebuilt/dt.img
 BOARD_KERNEL_BASE := 0x80000000
@@ -69,22 +70,30 @@ LZMA_RAMDISK_TARGETS := recovery
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
 
-# Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := RGB_565
-
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
-# TWRP Configuration
-# Can exclude bash, nano and twrpapp to make image recovery image smaller size
-TW_EXCLUDE_BASH := true
-TW_EXCLUDE_NANO := true
-TW_EXCLUDE_TWRPAPP := true
-# Tell device there is Samsung (odin) download mode
-TW_HAS_DOWNLOAD_MODE := true
+# TWRP
+TW_THEME := portrait_hdpi
+BOARD_HAS_NO_REAL_SDCARD := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 180
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_USB_STORAGE := true
 TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_BOOTLOADER_BOARD_NAME := msm8916
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
+
 # Needed to control brightness
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_THEME := portrait_hdpi
@@ -92,3 +101,11 @@ TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
+
+#Encryption
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+TW_INCLUDE_CRYPTO := true
+
+# Debug
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
